@@ -1,37 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Buttons Assignment</title>
-  <!-- Bootstrap 5.3 CSS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Buttons Assignment - Fixed</title>
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Small visual tweaks to match the compact screenshot look */
+    .btn-compact {
+      padding: .22rem .5rem;   /* smaller padding */
+      font-size: .75rem;       /* smaller text */
+      line-height: 1;
+      border-radius: .35rem;
+    }
+    /* Make the full-width button a bit taller and center its text like screenshot */
+    #button-5 {
+      padding-top: .55rem;
+      padding-bottom: .55rem;
+      font-weight: 600;
+    }
+    /* Slight top border like screenshot's thin top line (optional) */
+    header.hr-like {
+      border-top: 3px solid #f1f1f1;
+      margin-bottom: .6rem;
+    }
+  </style>
 </head>
 <body>
+  <div class="container mt-3">
 
-  <div class="container mt-4">
-    <h5>Bootstrap Buttons</h5>
+    <!-- Small heading left aligned like your screenshot -->
+    <div class="row">
+      <div class="col-12">
+        <h6 class="mb-2">Bootstrap Buttons</h6>
+        <div class="hr-like"></div>
+      </div>
+    </div>
 
-    <!-- Row 1: Buttons 1–4 (in one line) -->
-    <div class="btn-group mb-2" role="group" aria-label="First group">
-      <button id="button-1" type="button" class="btn btn-primary">Button-1</button>
-      <button id="button-2" type="button" class="btn btn-outline-secondary">Button-2</button>
-      <button id="button-3" type="button" class="btn btn-success">Button-3</button>
-      <button id="button-4" type="button" class="btn btn-danger">Button-4</button>
+    <!-- Row 1: Buttons 1–4 inline, compact -->
+    <div class="row mb-2">
+      <div class="col-12">
+        <button id="button-1" class="btn btn-primary btn-compact me-2">Button-1</button>
+        <button id="button-2" class="btn btn-outline-secondary btn-compact me-2">Button-2</button>
+        <button id="button-3" class="btn btn-success btn-compact me-2">Button-3</button>
+        <button id="button-4" class="btn btn-danger btn-compact">Button-4</button>
+      </div>
     </div>
 
     <!-- Row 2: Full width Button 5 -->
-    <button id="button-5" type="button" class="btn btn-warning w-100 mb-2">Button-5</button>
+    <div class="row mb-2">
+      <div class="col-12">
+        <button id="button-5" class="btn btn-warning w-100 text-center">Button-5</button>
+      </div>
+    </div>
 
-    <!-- Row 3: Buttons 6–8 (in one line) -->
-    <div class="btn-group" role="group" aria-label="Second group">
-      <button id="button-6" type="button" class="btn btn-info" disabled>Button-6</button>
-      <button id="button-7" type="button" class="btn btn-light">Button-7</button>
-      <button id="button-8" type="button" class="btn btn-link">Button-8</button>
+    <!-- Row 3: Buttons 6–8 inline, compact -->
+    <div class="row">
+      <div class="col-12">
+        <button id="button-6" class="btn btn-info btn-compact me-2" disabled>Button-6</button>
+        <button id="button-7" class="btn btn-light btn-compact me-2">Button-7</button>
+        <button id="button-8" class="btn btn-link btn-compact">Button-8</button>
+      </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
